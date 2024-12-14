@@ -7,8 +7,8 @@ import StairTransition from "@/components/StairTransition";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "John Doe | Software Engineer",
-  description: "A portfolio website for education purposes",
+  title: "Yisak Zemedu | Software Engineer",
+  description: "A portfolio website ",
 };
 
 const raleway = localFont({

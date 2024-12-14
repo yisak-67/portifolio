@@ -7,9 +7,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import projectOne from "@/images/projectOne.png";
+
 import projectTwo from "@/images/projectTwo.png";
+import projectfour from "@/images/projectfour.jpg";
 import projectThree from "@/images/projectThree.png";
+import projectOne from "@/images/projectOne.png";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
@@ -26,36 +28,54 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     id: "01",
+    title: "E-Learning Platform",
+    category: "Full Stack",
+    description:
+      "A modern e-learning platform built with React, featuring a responsive design, user authentication, and integration with a headless CMS for easy content management.",
+    stack: [
+      "React",
+      "Redux",
+      "mongoDB",
+      "Node.js",
+      "Firebase",
+      "Tailwind CSS",
+    ],
+    image: projectTwo,
+    liveUrl: "https://skillup-iqxf.onrender.com/",
+    githubUrl: "https://github.com/yisak-67",
+  },
+  {
+    id: "02",
+    title: "Product searching and filtering",
+    category: "Frontend",
+    description:
+      "An interactive weather forecast dashboard that provides real-time weather information and 5-day forecasts for multiple locations. Utilizes a third-party weather API.",
+    stack: ["React", "Tailwind css"],
+    image: projectThree,
+    liveUrl: "https://relaxed-puppy-768ff1.netlify.app/",
+    githubUrl: "https://github.com/yisak-67/filtering-and-pagination",
+  },
+  {
+    id: "03",
     title: "E-commerce Platform",
     category: "Full Stack",
     description:
       "A modern e-commerce platform built with Next.js, featuring a responsive design, user authentication, and integration with a headless CMS for easy content management.",
     stack: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
     image: projectOne,
-    liveUrl: "https://ecommerceapp.reactbd.com/",
-    githubUrl: "https://github.com/noorjsdivs/",
+    liveUrl: "https://ecommercepro.reactbd.com/",
+    githubUrl: "https://github.com/yisak-67/ecommerce-main",
   },
   {
-    id: "02",
-    title: "Task Management App",
-    category: "Frontend",
+    id: "04",
+    title: "Cheep Delala",
+    category: "fullstack",
     description:
-      "A sleek task management application that helps users organize their daily activities, set priorities, and track progress. Built with React and Redux for state management.",
-    stack: ["React", "Redux", "Styled Components", "Firebase"],
-    image: projectTwo,
-    liveUrl: "https://ecommerceapp.reactbd.com/",
-    githubUrl: "https://github.com/noorjsdivs/",
-  },
-  {
-    id: "03",
-    title: "Weather Forecast Dashboard",
-    category: "Frontend",
-    description:
-      "An interactive weather forecast dashboard that provides real-time weather information and 5-day forecasts for multiple locations. Utilizes a third-party weather API.",
-    stack: ["Vue.js", "Vuex", "Chart.js", "OpenWeatherMap API"],
-    image: projectThree,
-    liveUrl: "https://ecommerceapp.reactbd.com/",
-    githubUrl: "https://github.com/noorjsdivs/",
+      "Cheap Delala is an online platform designed to facilitate secure and highly privatized agreements between home providers and home seekers for both rental and sale purposes. The platform will offer property posting and real-time chatting.",
+    stack: ["React", "Tailwind css", "node js"],
+    image: projectfour,
+    liveUrl: " ",
+    githubUrl: "https://github.com/yisak-67/cheep-delala",
   },
 ];
 
@@ -98,18 +118,18 @@ const WorkPage = () => {
                             <TooltipProvider>
                               <Tooltip>
                                 <TooltipTrigger asChild>
-                                  <Button
-                                    variant="outline"
-                                    size="icon"
-                                    className="bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect"
-                                  >
-                                    <Link href={project?.liveUrl}>
+                                  <Link href={project?.liveUrl}>
+                                    <Button
+                                      variant="outline"
+                                      size="icon"
+                                      className="bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect"
+                                    >
                                       <ArrowUpRight />{" "}
                                       <span className="sr-only">
                                         View Live Project
                                       </span>
-                                    </Link>
-                                  </Button>
+                                    </Button>
+                                  </Link>
                                 </TooltipTrigger>
                                 <TooltipContent className="bg-white text-black font-semibold">
                                   <p>View Live Project</p>
@@ -119,18 +139,18 @@ const WorkPage = () => {
                             <TooltipProvider>
                               <Tooltip>
                                 <TooltipTrigger asChild>
-                                  <Button
-                                    variant="outline"
-                                    size="icon"
-                                    className="bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect"
-                                  >
-                                    <Link href={project?.githubUrl}>
+                                  <Link href={project?.githubUrl}>
+                                    <Button
+                                      variant="outline"
+                                      size="icon"
+                                      className="bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect"
+                                    >
                                       <Github />{" "}
                                       <span className="sr-only">
                                         View Github Repository
                                       </span>
-                                    </Link>
-                                  </Button>
+                                    </Button>
+                                  </Link>
                                 </TooltipTrigger>
                                 <TooltipContent className="bg-white text-black font-semibold">
                                   <p>View Github Repository</p>
@@ -142,12 +162,12 @@ const WorkPage = () => {
                       </div>
                       {/* image */}
                       <div className="w-full md:w-1/2 order-1 md:order-2">
-                        <div className="relative h-72 sm:h-96 bg-gray-700 rounded-lg overflow-hidden">
+                        <div className="relative h-72 sm:h-96 bg-gray-700 rounded-lg overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl">
                           <Image
                             src={project?.image}
                             alt={project.title}
                             fill
-                            className="object-cover"
+                            className="object-cover object-center"
                           />
                         </div>
                       </div>
@@ -157,9 +177,9 @@ const WorkPage = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute right-10 -bottom-8">
-            <CarouselPrevious className="rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect" />
-            <CarouselNext className="rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect" />
+          <div className="absolute right-10 -bottom-8 flex space-x-4">
+            <CarouselPrevious className="rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect transition-transform duration-300" />
+            <CarouselNext className="rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect transition-transform duration-300" />
           </div>
         </Carousel>
       </PageLayout>

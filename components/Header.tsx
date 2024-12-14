@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className="border-b border-b-hoverColor/20 bg-bodyColor text-white sticky top-0 z-50">
       <Container className="py-5 flex items-center justify-between">
-        <Logo title="John" subtitle="." />
+        <Logo title="Yisak" subtitle="." />
         <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
           {navbarData?.map((item) => (
             <Link

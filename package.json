@@ -19,6 +19,8 @@
     "@radix-ui/react-tooltip": "^1.1.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "emailjs": "^4.0.3",
+    "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.5.1",
     "lucide-react": "^0.464.0",
     "motion": "^11.13.1",

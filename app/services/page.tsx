@@ -26,7 +26,7 @@ const ServicesPage = () => {
                 </Link>
               </div>
               <h2 className="font-semibold text-white">{item?.title}</h2>
-              <p className="text-sm md:text-base">{item?.description}</p>
+              <ul className="list-disc pl-5 mt-3 text-sm md:text-base transition-all duration-300 ease-in-out transform opacity-100"> {item.data?.map((dataItem, index) => ( <li key={index} className="mb-2">{dataItem}</li> ))} </ul>
               <Separator className="bg-white/20" />
             </div>
           ))}

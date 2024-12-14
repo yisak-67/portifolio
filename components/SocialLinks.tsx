@@ -17,7 +17,7 @@ const socialData = [
   {
     title: "Github",
     icon: <Github />,
-    href: "https://www.youtube.com/@reactjsBD",
+    href: "https://github.com/yisak-67",
   },
   {
     title: "Linkedin",
@@ -27,13 +27,13 @@ const socialData = [
   {
     title: "Facebook",
     icon: <Facebook />,
-    href: "https://www.youtube.com/@reactjsBD",
+    href: "https://www.facebook.com/yisak zemedu",
   },
-  {
-    title: "Slack",
-    icon: <Slack />,
-    href: "https://www.youtube.com/@reactjsBD",
-  },
+  // {
+  //   title: "Slack",
+  //   icon: <Slack />,
+  //   href: "https://www.youtube.com/@reactjsBD",
+  // },
 ];
 
 const SocialLinks = () => {

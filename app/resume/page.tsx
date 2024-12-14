@@ -17,17 +17,17 @@ const tabContent = {
     title: "Professional Experience",
     items: [
       {
-        role: "Senior Frontend Developer",
-        company: "Tech Solutions Inc.",
-        period: "2021 - Present",
+        role: "Fullstack Developer",
+        company: "Dan Energy",
+        period: "april 2024 - Jully-2024",
         description:
-          "Led the development of multiple React-based web applications, improving performance by 40%. Mentored junior developers and implemented best practices for code quality.",
-        highlights: ["React", "Next.js", "TypeScript", "Team Leadership"],
+         "Developed a web-based e-learning platform that allows for secure course management, including features for course enrollment, user profile management, and course content management. The platform uses JWT for secure authentication, ensuring safe and seamless access for users.",
+        highlights: ["React", "Node.js", "Redux toolkit ","MongoDB","firebase", "Team Leadership"],
       },
       {
         role: "Full Stack Developer",
-        company: "Digital Innovations Ltd",
-        period: "2018 - 2021",
+        company: "Personal Project",
+        period: "2024",
         description:
           "Developed and maintained full-stack applications using modern JavaScript frameworks. Collaborated with cross-functional teams to deliver high-quality solutions.",
         highlights: ["Node.js", "React", "MongoDB", "AWS"],
@@ -37,20 +37,13 @@ const tabContent = {
   education: {
     title: "Educational Background",
     items: [
+    
       {
-        degree: "Master of Computer Science",
-        institution: "Tech University",
-        period: "2016 - 2018",
+        degree: "Bachelor of Software Engineering",
+        institution: "Arbamunchi University",
+        period: "2021 - 2025",
         description:
-          "Specialized in Software Engineering and Artificial Intelligence. Graduated with honors.",
-        achievements: ["4.0 GPA", "Research Publication", "Dean's List"],
-      },
-      {
-        degree: "Bachelor of Computer Science",
-        institution: "State University",
-        period: "2012 - 2016",
-        description:
-          "Foundation in computer science principles, data structures, and algorithms.",
+          "Foundation in software engineering. Topics include programming languages, data structures, and algorithms.",
         achievements: ["Academic Excellence Award", "Programming Club Lead"],
       },
     ],
@@ -61,7 +54,7 @@ const tabContent = {
       {
         name: "Frontend Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
+          "Expertise in building responsive and dynamic user interfaces using modern frontend frameworks and libraries. Skilled in creating highly performant and visually appealing web applications with a focus on user experience and accessibility.",
         skills: [
           "React",
           "Next.js",
@@ -73,29 +66,41 @@ const tabContent = {
       {
         name: "Backend Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
+          "Proficient in designing and implementing robust server-side applications. Experienced in creating scalable APIs, managing databases, and ensuring secure and efficient backend architectures.",
         skills: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"],
       },
       {
         name: "Tools & Others",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
-        skills: ["Git", "Docker", "AWS", "CI/CD", "Agile Methodologies"],
+          "Hands-on experience with essential development tools and platforms. Adept at version control, containerization, and deploying applications to cloud environments to ensure seamless operations.",
+        skills: ["Git", "Docker", "AWS"],
       },
     ],
   },
+  
   about: {
     title: "About Me",
-    bio: "Passionate software developer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-centric design and accessibility.",
+    bio: "As a Full-stack developer, I specialize in utilizing modern web frameworks to create dynamic and engaging web pages with a strong emphasis on UI/UX user interface. I am passionate about leveraging the latest technologies to deliver cutting-edge projects that exceed client expectations.",
     interests: [
-      "Open Source Contributing",
-      "Tech Blogging",
+      "Website development",
+      "Mobile app development",
       "UI/UX Design",
-      "Machine Learning",
+     
     ],
-    languages: ["English (Native)", "Spanish (Intermediate)", "German (Basic)"],
+    languages: ["English (Native)"],
   },
+
 };
+const BadgeList = ({ items }) => (
+  <div className="flex flex-wrap gap-2">
+    {items.map((item, index) => (
+      <Badge key={index} variant="secondary">
+        {item}
+      </Badge>
+    ))}
+  </div>
+);
+
 const ResumePage = () => {
   return (
     <div className="flex flex-col justify-center py-10">
@@ -240,56 +245,37 @@ const ResumePage = () => {
                 ))}
               </div>
             </TabsContent>
+            
             <TabsContent value="about">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-2xl font-bold mb-6 text-lightSky"
-              >
-                {tabContent.about.title}
-              </motion.h2>
-              <div className="space-y-6">
-                {tabContent?.experience?.items.map((item, index) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    key={index}
-                    className="border rounded-lg border-lightSky/20 p-6"
-                  >
-                    <p className="text-white/90 mb-6 text-lg">
-                      {tabContent.about.bio}
-                    </p>
-                    <div className="space-y-4">
-                      <div>
-                        <h3 className="text-lg font-semibold mb-2">
-                          Interests
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          {tabContent.about.interests.map((interest, i) => (
-                            <Badge key={i} variant="secondary">
-                              {interest}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold mb-2">
-                          Languages
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          {tabContent.about.languages.map((language, i) => (
-                            <Badge key={i} variant="secondary">
-                              {language}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </TabsContent>
+  <motion.h2
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    className="text-2xl font-bold mb-6 text-lightSky"
+  >
+    {tabContent.about.title}
+  </motion.h2>
+  <div className="space-y-6">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="border rounded-lg border-lightSky/20 p-6"
+    >
+      <p className="text-white/90 mb-6 text-lg">
+        {tabContent.about.bio}
+      </p>
+      <div className="space-y-4">
+        <div>
+          <h3 className="text-lg font-semibold mb-2">Interests</h3>
+          <BadgeList items={tabContent.about.interests} />
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-2">Languages</h3>
+          <BadgeList items={tabContent.about.languages} />
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</TabsContent>
           </div>
         </Tabs>
       </PageLayout>

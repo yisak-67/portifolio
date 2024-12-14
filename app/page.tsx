@@ -3,7 +3,7 @@ import HomeDescription from "@/components/HomeDescription";
 import Photo from "@/components/Photo";
 import SocialLinks from "@/components/SocialLinks";
 import Statistics from "@/components/Statistics";
-import { Button } from "@/components/ui/button";
+
 import { Download } from "lucide-react";
 import Link from "next/link";
 

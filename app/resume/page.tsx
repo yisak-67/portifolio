@@ -48,6 +48,7 @@ const tabContent = {
       },
     ],
   },
+  
   skills: {
     title: "Technical Skills",
     categories: [
@@ -91,7 +92,12 @@ const tabContent = {
   },
 
 };
-const BadgeList = ({ items }) => (
+
+type BadgeListProps = {
+  items: string[];
+};
+
+const BadgeList: React.FC<BadgeListProps> = ({ items }) => (
   <div className="flex flex-wrap gap-2">
     {items.map((item, index) => (
       <Badge key={index} variant="secondary">
@@ -100,6 +106,7 @@ const BadgeList = ({ items }) => (
     ))}
   </div>
 );
+
 
 const ResumePage = () => {
   return (

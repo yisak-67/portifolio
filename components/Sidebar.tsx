@@ -12,6 +12,7 @@ interface Props {
   pathname: string;
 }
 
+
 const Sidebar: React.FC<Props> = ({ isOpen, onClose, pathname }) => {
   const sidebarRef = useOutsideClick<HTMLDivElement>(onClose);
   return (

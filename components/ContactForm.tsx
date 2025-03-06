@@ -83,6 +83,7 @@ const ContactForm = () => {
       if (result.status === 200) {
         setSuccess(true);
         setStatus("Success! Your message has been sent.");
+      
         setFormData({
           Name: "",
           Email: "",
